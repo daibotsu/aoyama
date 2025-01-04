@@ -4,15 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="assets/css/destyle.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
 <link rel="stylesheet" href="assets/css/style.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
 <meta name="format-detection" content="telephone=no">
 <title>青山会計事務所</title>
 <meta name="robots" content="noindex" />
 <!-- google font -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique:wght@400;500;&family=Outfit:wght@200;300;&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique:wght@400;500&family=Outfit:wght@100;200;300&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -38,26 +40,70 @@
 				<div class="header-btn js-header-btn">
 					<span></span>
 					<span></span>
-					<span></span>
 				</div>
+
+				<div class="drawer">
+					<div class="drawer__inner">
+						<div class="drawer__text">
+							<div class="drawer-link-wrap">
+								<ul class="drawer-link__list">
+									<li class="drawer-link__item">
+										<a href="" class="js-link drawer-link head" data-link="strong">青山会計事務所の強み</a>
+									</li>
+									<li class="drawer-link__item">
+										<a href="" class="js-link drawer-link head" data-link="service">サービス内容</a>
+										<ul class="drawer-sub-link__list">
+											<li class="drawer-sub-link__item"><a href="" class="js-link sub-link" data-link="service">－ 税務・会計</a></li>
+											<li class="drawer-sub-link__item"><a href="" class="js-link sub-link" data-link="service">－ 相続・贈与・譲渡所得</a></li>
+											<li class="drawer-sub-link__item"><a href="" class="js-link sub-link" data-link="service">－ 設立・開業支援</a></li>
+										</ul>
+									</li>
+								</ul>
+								<ul class="drawer-link__list">
+									<li class="drawer-link__item">
+										<a href="" class="js-link drawer-link head" data-link="access">事務所案内</a>
+										<ul class="drawer-sub-link__list">
+											<li class="drawer-sub-link__item sub-link"><a href="" class="js-link" data-link="access">－ 代表挨拶</a></li>
+											<li class="drawer-sub-link__item sub-link ml15"><a href="" class="js-link" data-link="access">－ 経営理念</a></li>
+											<li class="drawer-sub-link__item sub-link"><a href="" class="js-link" data-link="access">－ 事務所概要</a></li>
+											<li class="drawer-sub-link__item sub-link"><a href="" class="js-link" data-link="access">－ アクセス</a></li>
+										</ul>
+									</li>
+								</ul>
+								<ul class="drawer-link__list">
+									<li class="drawer-link__item">
+										<a href="" class="js-link drawer-link" data-link="voice">お客様の声</a>
+									</li>
+									<li class="drawer-link__item">
+										<a href="" class="js-link drawer-link" data-link="news">お知らせ</a>
+									</li>
+									<li class="drawer-link__item">
+										<a href="" class="js-link drawer-link" data-link="contact">お問い合わせ</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="drawer__image">
+							<img src="assets/images/drawer/strong.png" alt="" class="js-link-target is-active" data-target="strong">
+							<img src="assets/images/drawer/service.png" alt="" class="js-link-target" data-target="service">
+							<img src="assets/images/drawer/access.png" alt="" class="js-link-target" data-target="access">
+							<img src="assets/images/drawer/voice.png" alt="" class="js-link-target" data-target="voice">
+							<img src="assets/images/drawer/news.png" alt="" class="js-link-target" data-target="news">
+							<img src="assets/images/drawer/contact.png" alt="" class="js-link-target" data-target="contact">
+						</div>
+						<div class="scroll-text">
+							<p>Numbers Expert Numbers Expert</p>
+							<p>Numbers Expert Numbers Expert</p>
+							<p>Numbers Expert Numbers Expert</p>
+						</div>
+					</div>
+				</div>
+
 			</div>
 		</div>　　　
 	</div>
 
-	<div class="drawer">
-		<div class="drawer__inner">
-			<nav class="drawer-nav">
-				<ul class="drawer-nav__list">
-					<li class="drawer-nav__item"><a href="./">青山会計事務所の強み</a></li>
-					<li class="drawer-nav__item"><a href="#top-business">サービス内容</a></li>
-					<li class="drawer-nav__item"><a href="#top-about">お客様の声</a></li>
-					<li class="drawer-nav__item"><a href="#top-about">お知らせ</a></li>
-					<li class="drawer-nav__item"><a href="#top-about">事務所案内</a></li>
-				</ul>
-			</nav>
-			<a href="contact" class="btn drawer__btn">お問い合わせ<span class="btn-arrow"></span></a>
-		</div>
-	</div>
+	
 
 </header>
 
@@ -67,32 +113,38 @@
 	<div class="top-catch__inner">
 		<div class="top-catch__text">
 			<span>Numbers<br class="pc-none"> Expert</span>
-			<p>数字の専門家ともに歩むパートナーとして。</p>
+			<p>数字の専門家<br class="pc-none">ともに歩むパートナーとして。</p>
 		</div>
 		<div class="down-arrow"><img src="assets/images/top/scrolldown_arrow.svg" alt=""></div>
 	</div>
 	<div class="top-catch__image">
-		<img src="assets/images/top/mv.webp" alt="オフィスでノートパソコンを使いながら話し合う二人のビジネスパーソンの様子">
+		<picture>
+		  <source srcset="assets/images/top/mv.webp" media="(min-width: 768px)" alt="オフィスでノートパソコンを使いながら話し合う二人のビジネスパーソンの様子"/> <!-- PC画像 -->
+		  <img src="assets/images/top/mv_sp.webp" alt="オフィスでノートパソコンを使いながら話し合う二人のビジネスパーソンの様子"/> <!-- スマホ画像 -->
+		</picture>
 	</div>
 </div>
 
 <section class="top-about">
 	<div class="top-about__inner">
 		<div class="heading">
-			<h2 class="title-en title-en--large blue_1"><span class="top">Realization of</span><span class="bottom">I want to do this</span></h2>
+			<h2 class="top-about__title blue_1"><span class="top">Realization of</span><span class="bottom">I want to do this</span></h2>
 		</div>
 		<div class="top-about__column">
 			<div class="top-about__text">
-				<p class="top-about__catch">「こうしたい」を実現する</p>
+				<p class="top-about__catch">「こうしたい」<span>を実現する</span></p>
 				<p class="top-about__main">寄り添い、ともに考え、ともに歩む。 <br>
 				それが私たちの考える「数字の専門家」としての在り方です。<br><br>
 
-				確かな知識と経験、誠実な対応、<br> 
-				そして何より、お客様の未来を想う気持ちを大切に、<br>
+				確かな知識と経験、誠実な対応、<br class="sp-none"> 
+				そして何より、お客様の未来を想う気持ちを大切に、<br class="sp-none">
 				これからも皆様の会社の成長をサポートしてまいります。<br><br>
 
 				会計のことなら青山会計事務所にお任せください。</p>
-				<a href="" class="link top-about__link">私たちについて</a>
+				<a href="" class="top-about__link link">
+					<span class="line top-about__line"></span>
+					<span class="link-text top-about__link-text js-splitText">私たちについて</span>
+				</a>
 			</div>
 			<div class="top-about__image">
 				<img src="assets/images/top/about.webp" alt="窓の前に立つ3人のアジア人ビジネスパーソンの姿">
@@ -101,7 +153,7 @@
 	</div>
 </section>
 
-<div class="scroll-text">
+<div class="scroll-text scroll-text--black">
 	<p>As partners walking together</p>
 </div>
 
@@ -110,112 +162,184 @@
 		<div class="top-service__heading">
 			<div class="heading">
 				<h2 class="title-type02--ja">サービス内容</h2>
-				<span class="title-en--large">Our Service</span>
+				<p class="title-en title-en--large"><span>Our Service</span></p>
 			</div>
-			<a href="" class="link top-service__link">サービス内容について詳しく見る</a>
+			<!-- <div class="top-service__link">
+				<a href="" class="link js-splitText">サービス内容について詳しく見る</a>
+			</div> -->
+			<a href="" class="top-service__link link">
+				<span class="line top-service__line"></span>
+				<span class="link-text top-service__link-text js-splitText">サービス内容について詳しく見る</span>
+			</a>
 		</div>
 	</div>
-	<ul class="top-service__list">
-		<li class="top-service__item top-service-card">
-			<div class="top-service__image">
-				<img src="assets/images/top/service01.webp" alt="ビジネスに適した会計ソフトウェアの選び方を示す画像。機能や価格を比較するポイントが強調されています">
-			</div>
-			<div class="top-service-card__body">
-				<h3 class="top-service-card__title"><a href="">税務・会計</a></h3>
-				<span class="top-service-card__title--en">Tax & Accounting</span>
-				<a href="" class="btn"><img src="assets/images/common/btn.svg" alt=""></a>
-			</div>
-		</li>
-		<li class="top-service__item top-service-card">
-			<div class="top-service__image">
-				<img src="assets/images/top/service02.webp" alt="男性と女性がテーブルに座っている様子">
-			</div>
-			<div class="top-service-card__body">
-				<h3 class="top-service-card__title"><a href="">相続・贈与・譲渡所得</a></h3>
-				<span class="top-service-card__title--en">Capital gains</span>
-				<a href="" class="btn"><img src="assets/images/common/btn.svg" alt=""></a>
-			</div>
-		</li>
-		<li class="top-service__item top-service-card">
-			<div class="top-service__image">
-				<img src="assets/images/top/service03.webp" alt="ビジネススーツを着た女性が高層ビルの前に立っている様子">
-			</div>
-			<div class="top-service-card__body">
-				<h3 class="top-service-card__title"><a href="">設立・開業支援</a></h3>
-				<span class="top-service-card__title--en">Support for opening a business</span>
-				<a href="" class="btn"><img src="assets/images/common/btn.svg" alt=""></a>
-			</div>
-		</li>
-	</ul>
+	<div class="top-service__list-wrap">
+		<ul class="top-service__list">
+			<li class="top-service__item top-service-card">
+				<div class="top-service__image">
+					<img src="assets/images/top/service01.webp" alt="ビジネスに適した会計ソフトウェアの選び方を示す画像。機能や価格を比較するポイントが強調されています">
+				</div>
+				<div class="top-service-card__body">
+					<h3 class="top-service-card__title"><a href="">税務・会計</a></h3>
+					<span class="top-service-card__title--en">Tax & Accounting</span>
+					<a href="" class="btn btn--black">
+						<svg width="84" height="30" viewBox="0 0 84 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M57 15H27" stroke="white" class="stroke"/>
+							<path d="M53 11L57 15L53 19" stroke="white" class="stroke"/>
+							<rect x="-0.5" y="0.5" width="83" height="29" rx="14.5" transform="matrix(-1 0 0 1 83 0)" stroke="white" class="stroke"/>
+						</svg>
+					</a>
+				</div>
+			</li>
+			<li class="top-service__item top-service-card">
+				<div class="top-service__image">
+					<img src="assets/images/top/service02.webp" alt="男性と女性がテーブルに座っている様子">
+				</div>
+				<div class="top-service-card__body">
+					<h3 class="top-service-card__title"><a href="">相続・贈与・<span>譲渡所得</span></a></h3>
+					<span class="top-service-card__title--en">Capital gains</span>
+					<a href="" class="btn btn--black">
+						<svg width="84" height="30" viewBox="0 0 84 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M57 15H27" stroke="white" class="stroke"/>
+							<path d="M53 11L57 15L53 19" stroke="white" class="stroke"/>
+							<rect x="-0.5" y="0.5" width="83" height="29" rx="14.5" transform="matrix(-1 0 0 1 83 0)" stroke="white" class="stroke"/>
+						</svg>
+					</a>
+				</div>
+			</li>
+			<li class="top-service__item top-service-card">
+				<div class="top-service__image">
+					<img src="assets/images/top/service03.webp" alt="ビジネススーツを着た女性が高層ビルの前に立っている様子">
+				</div>
+				<div class="top-service-card__body">
+					<h3 class="top-service-card__title"><a href="">設立・<span>開業支援</span></a></h3>
+					<span class="top-service-card__title--en">Support for opening a business</span>
+					<a href="" class="btn btn--black">
+						<svg width="84" height="30" viewBox="0 0 84 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M57 15H27" stroke="white" class="stroke"/>
+							<path d="M53 11L57 15L53 19" stroke="white" class="stroke"/>
+							<rect x="-0.5" y="0.5" width="83" height="29" rx="14.5" transform="matrix(-1 0 0 1 83 0)" stroke="white" class="stroke"/>
+						</svg>
+					</a>
+				</div>
+			</li>
+		</ul>
+	</div>
 </section>
-
+<div class="bg-block">
+	<div class="bg-block__item bg-block__left"></div>
+	<div class="bg-block__item bg-block__center"></div>
+	<div class="bg-block__item bg-block__right"></div>
+</div>
 <section class="top-feature">
-	<div class="container">
-		<div class="heading">
-			<h2 class="title-type02--ja">青山会計事務所の強み</h2>
-			<span class="title-en--large">Our Feature</span>
+	<div class="top-feature__inner">
+		<div class="top-feature__heading">
+			<div class="heading">
+				<h2 class="title-type02--ja">青山会計事務所の強み</h2>
+				<p class="title-en title-en--large"><span>Our Feature</span></p>
+			</div>
 		</div>
 		<div class="top-feature__content">
 			<div class="top-feature__image">
 				<img src="assets/images/top/feature.webp" alt="スーツを着た二人の男性が互いに話し合っている様子">
-			</div>
-			<div class="top-feature__text">
-				<p class="top-feature__catch">一言でいえば、<br>プロフェッショナル。</p>
 				<div class="scroll-text">
 					<p>Professional in a word.</p>
 				</div>
+			</div>
+			<div class="top-feature__text">
+				<p class="top-feature__catch">一言でいえば、<br>プロフェッショナル。</p>
 				<p class="top-feature__main">税務・会計・相続・贈与・譲渡所得など、それぞれの分野に専門家を配置しております。<br>
 				また、司法書士や行政書士など他士業の方々ともネットワークを構築しており、<br>
 				青山会計事務所にご相談いただければトータルでサポートできるのが特徴です。</p>
-				<a href="" class="link">青山会計事務所の強みを見る</a>
+				<!-- <div class="top-feature__link">
+					<a href="" class="link js-splitText">青山会計事務所の強みを見る</a>
+				</div> -->
+
+				<a href="" class="top-feature__link link">
+					<span class="line top-feature__line"></span>
+					<span class="link-text top-feature__link-text js-splitText">青山会計事務所の強みを見る</span>
+				</a>
 			</div>
 		</div>
 	</div>
 </section>
-
-<section class="top-voice">
+<div class="bg-block">
+	<div class="bg-block__item bg-block__left--bk"></div>
+	<div class="bg-block__item bg-block__center--bk"></div>
+	<div class="bg-block__item bg-block__right--bk"></div>
+</div>
+<section class="top-voice target-area" id="target-section">
 	<div class="top-voice__inner">
 		<div class="top-voice__left">
 			<div class="heading">
 				<h2 class="title-type02--ja">お客様の声</h2>
-				<span class="title-en--small">Customer<br>Voice</span>
+				<span class="title-en title-en--small">Customer<br>Voice</span>
+			</div>
+			<div class="swiper-button-wrap">
+				<div class="swiper-button-prev btn">
+					<svg width="84" height="30" viewBox="0 0 84 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M27 15H57" stroke="white" class="stroke"/>
+						<path d="M31 11L27 15L31 19" stroke="white" class="stroke"/>
+						<rect x="0.5" y="0.5" width="83" height="29" rx="14.5" stroke="white" class="stroke"/>
+					</svg>
+				</div>
+				<div class="swiper-button-next btn">
+					<svg width="84" height="30" viewBox="0 0 84 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M57 15H27" stroke="white" class="stroke"/>
+						<path d="M53 11L57 15L53 19" stroke="white" class="stroke"/>
+						<rect x="-0.5" y="0.5" width="83" height="29" rx="14.5" transform="matrix(-1 0 0 1 83 0)" stroke="white" class="stroke"/>
+					</svg>
+				</div>
 			</div>
 		</div>
-		<ul class="top-voice__list">
-			<li class="top-voice__item">
-				<div class="top-voice__image">
-					<img src="assets/images/voice/voice01.png" alt="">
-				</div>
-				<span class="top-voice__name"><a href="">株式会社桐嶋製作所  K・O様</a></span>
-				<p class="top-voice__text">数字のプロ。言われたことだけじゃなく、提案までしてくれるのでいつも助かります</p>
-			</li>
-			<li class="top-voice__item">
-				<div class="top-voice__image">
-					<img src="assets/images/voice/voice02.png" alt="">
-				</div>
-				<span class="top-voice__name"><a href="">株式会社桐嶋製作所  K・O様</a></span>
-				<p class="top-voice__text">数字のプロ。言われたことだけじゃなく、提案までしてくれるのでいつも助かります</p>
-			</li>
-			<li class="top-voice__item">
-				<div class="top-voice__image">
-					<img src="assets/images/voice/voice03.png" alt="">
-				</div>
-				<span class="top-voice__name"><a href="">株式会社桐嶋製作所  K・O様</a></span>
-				<p class="top-voice__text">数字のプロ。言われたことだけじゃなく、提案までしてくれるのでいつも助かります</p>
-			</li>
-		</ul>
+		<div class="swiper-container">
+			<div class="swiper">
+				<ul class="top-voice__list swiper-wrapper">
+					<li class="top-voice__item swiper-slide">
+						<span class="top-voice__num">(01)</span>
+						<div class="top-voice__image">
+							<img src="assets/images/voice/voice01.png" alt="">
+						</div>
+						<span class="top-voice__name"><a href="">株式会社桐嶋製作所  K・O様</a></span>
+						<p class="top-voice__text">数字のプロ。言われたことだけじゃなく、提案までしてくれるのでいつも助かります</p>
+					</li>
+					<li class="top-voice__item swiper-slide">
+						<span class="top-voice__num">(02)</span>
+						<div class="top-voice__image">
+							<img src="assets/images/voice/voice02.png" alt="">
+						</div>
+						<span class="top-voice__name"><a href="">株式会社桐嶋製作所  K・O様</a></span>
+						<p class="top-voice__text">数字のプロ。言われたことだけじゃなく、提案までしてくれるのでいつも助かります</p>
+					</li>
+					<li class="top-voice__item swiper-slide">
+						<span class="top-voice__num">(03)</span>
+						<div class="top-voice__image">
+							<img src="assets/images/voice/voice03.png" alt="">
+						</div>
+						<span class="top-voice__name"><a href="">株式会社桐嶋製作所  K・O様</a></span>
+						<p class="top-voice__text">数字のプロ。言われたことだけじゃなく、提案までしてくれるのでいつも助かります</p>
+					</li>
+				</ul>
+		  	</div>
+	  	</div>
 	</div>
-	<div class="top-voice__link">
-		<a href="" class="link">お客様の声一覧を見る</a>
-	</div>
+	<!-- <div class="top-voice__link">
+		<a href="" class="link js-splitText">お客様の声一覧を見る</a>
+	</div> -->
+	<a href="" class="top-voice__link link">
+		<span class="line top-voice__line"></span>
+		<span class="link-text top-voice__link-text js-splitText">お客様の声一覧を見る</span>
+	</a>
 </section>
 
 <section class="top-news">
 	<div class="container">
 		<div class="top-news__inner">
-			<div class="heading">
-				<h2 class="title-type02--ja">お客様の声</h2>
-				<span class="title-en--small">Customer<br>Voice</span>
+			<div class="top-news__left">
+				<div class="heading">
+					<h2 class="title-type02--ja">お知らせ</h2>
+					<span class="title-en title-en--small">News</span>
+				</div>
 			</div>
 			<ul class="top-news__list">
 				<li class="top-news__item">
@@ -256,9 +380,13 @@
 				</li>
 			</ul>
 		</div>
-		<div class="top-news__link">
-			<a href="" class="link">お知らせ一覧を見る</a>
-		</div>
+		<!-- <div class="top-news__link">
+			<a href="" class="link js-splitText">お知らせ一覧を見る</a>
+		</div> -->
+		<a href="" class="top-news__link link">
+			<span class="line top-news__line"></span>
+			<span class="link-text top-news__link-text js-splitText">お知らせ一覧を見る</span>
+		</a>
 	</div>
 </section>	
 
@@ -268,27 +396,66 @@
 	<div class="footer-contact">
 		<div class="footer-contact__inner">
 			<div class="footer-contact__text">
-				<div class="heading">
+				<div class="heading footer__heading">
 					<h2 class="title-type02--ja">お問い合わせ</h2>
-					<span class="title-en--large">Contact Us</span>
+					<span class="title-en footer__title">Contact Us</span>
 				</div>
-				<p>税務や会計について確認したいことなど、<br>どのようなご相談でも構いません。<br>まずはお気軽にご相談ください。</p>
-				<a href="" class="btn"></a>
+				<p>税務や会計について<br class="pc-none">確認したいことなど、<br class="sp-none">どのような<br class="pc-none">ご相談でも構いません。<br>まずはお気軽にご相談ください。</p>
+				<a href="" class="btn btn--black">
+					<svg width="84" height="30" viewBox="0 0 84 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M57 15H27" stroke="white" class="stroke"/>
+						<path d="M53 11L57 15L53 19" stroke="white" class="stroke"/>
+						<rect x="-0.5" y="0.5" width="83" height="29" rx="14.5" transform="matrix(-1 0 0 1 83 0)" stroke="white" class="stroke"/>
+					</svg>
+				</a>
 			</div>
 			<div class="footer-contact__image">
-				
+				<div class="swiper-container swiper-vertical01">
+			        <div class="swiper-wrapper" id="swiper-wrapper01">
+			            <!-- <div class="swiper-slide"><img src="assets/images/footer/contact_left_pc.png" alt="Image 1"></div> -->
+			            <div class="swiper-slide">
+			            	<picture>
+							  <source srcset="assets/images/footer/contact_left_pc.png" media="(min-width: 1025px)"/> <!-- PC画像 -->
+							  <img src="assets/images/footer/contact_left_sp.png" alt=""/> <!-- スマホ画像 -->
+							</picture>
+			            </div>
+			            <div class="swiper-slide">
+			            	<picture>
+							  <source srcset="assets/images/footer/contact_left_pc.png" media="(min-width: 1025px)"/> <!-- PC画像 -->
+							  <img src="assets/images/footer/contact_left_sp.png" alt=""/> <!-- スマホ画像 -->
+							</picture>
+			            </div>
+			        </div>
+			    </div>
+			    <div class="swiper-container swiper-vertical02">
+			        <div class="swiper-wrapper" id="swiper-wrapper02">
+			            <div class="swiper-slide">
+			            	<!-- <img src="assets/images/footer/contact_right_pc.png" alt="Image 1"> -->
+			            	<picture>
+							  <source srcset="assets/images/footer/contact_right_pc.png" media="(min-width: 1025px)"/> <!-- PC画像 -->
+							  <img src="assets/images/footer/contact_right_sp.png" alt=""/> <!-- スマホ画像 -->
+							</picture>
+			            </div>
+			            <div class="swiper-slide">
+			            	<picture>
+							  <source srcset="assets/images/footer/contact_right_pc.png" media="(min-width: 1025px)"/> <!-- PC画像 -->
+							  <img src="assets/images/footer/contact_right_sp.png" alt=""/> <!-- スマホ画像 -->
+							</picture>
+			            </div>
+			        </div>
+			    </div>
 			</div>
 		</div>
 	</div>
 
 	<div class="footer-main">
-		<div class="footer-main__inner container">
+		<div class="footer-main__inner">
 			<div class="footer-main__left">
 				<div class="footer-logo">
 					<img src="assets/images/common/logo.svg" alt="青山会計事務所" loading="lazy">
 				</div>
-				<address>〒422-0000<br>静岡市駿河区森下町 静岡MMタワー14F</address>
-				<div class="bottom">
+				<address class="footer-main__address">〒422-0000<br>静岡市駿河区森下町 静岡MMタワー14F</address>
+				<div class="footer-main__bottom">
 					<span>©2024 Aoyama Tax Office.｜</span>
 					<a href="">プライバシーポリシー</a>
 				</div>
@@ -296,36 +463,36 @@
 			<div class="footer-link-wrap">
 				<ul class="footer-link__list">
 					<li class="footer-link__item">
-						<a href="">青山会計事務所の強み</a>
+						<a href="" class="footer-link__parent">青山会計事務所の強み</a>
 					</li>
 					<li class="footer-link__item">
-						<a href="">サービス内容</a>
+						<a href="" class="footer-link__parent">サービス内容</a>
 						<ul class="footer-sub-link__list">
-							<li class="footer-sub-link__item"><a href="">税務・会計</a></li>
-							<li class="footer-sub-link__item"><a href="">相続・贈与・譲渡所得</a></li>
-							<li class="footer-sub-link__item"><a href="">設立・開業支援</a></li>
+							<li class="footer-sub-link__item"><a href="">－ 税務・会計</a></li>
+							<li class="footer-sub-link__item"><a href="">－ 相続・贈与・譲渡所得</a></li>
+							<li class="footer-sub-link__item"><a href="">－ 設立・開業支援</a></li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="footer-link__list">
 					<li class="footer-link__item">
-						<a href="">代表挨拶</a>
+						<a href="" class="footer-link__parent">代表挨拶</a>
 						<ul class="footer-sub-link__list">
-							<li class="footer-sub-link__item"><a href="">経営理念</a></li>
-							<li class="footer-sub-link__item"><a href="">事務所概要</a></li>
-							<li class="footer-sub-link__item"><a href="">アクセス</a></li>
+							<li class="footer-sub-link__item"><a href="">－ 経営理念</a></li>
+							<li class="footer-sub-link__item"><a href="">－ 事務所概要</a></li>
+							<li class="footer-sub-link__item"><a href="">－ アクセス</a></li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="footer-link__list">
 					<li class="footer-link__item">
-						<a href="">お客様の声</a>
+						<a href="" class="footer-link__parent">お客様の声</a>
 					</li>
 					<li class="footer-link__item">
-						<a href="">お知らせ</a>
+						<a href="" class="footer-link__parent">お知らせ</a>
 					</li>
 					<li class="footer-link__item">
-						<a href="">お問い合わせ</a>
+						<a href="" class="footer-link__parent">お問い合わせ</a>
 					</li>
 				</ul>
 			</div>
@@ -334,6 +501,7 @@
 </footer>
 
 <div class="bg"></div>
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 <script src="assets/js/script.js"></script>
 </body>
 </html>
