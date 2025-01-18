@@ -1,11 +1,11 @@
 jQuery(function() {
 
-	$('.header-btn, .bg').on('click', function() {
+	$('.header-btn').on('click', function() {
 		$('.header-btn').toggleClass('is-fixed');
 		$('.drawer').toggleClass('slidein');
 		$('.header-btn span').toggleClass('close');
 		$('body').toggleClass('is-noscroll');
-		$('.bg').toggleClass('is-show');
+		$('.header').toggleClass('is-in');
 	});
 
 	$(window).on('resize', function() {
@@ -14,13 +14,12 @@ jQuery(function() {
       	$('.drawer').removeClass('slidein');
       	$('.js-header-btn span').removeClass('close');
       	$('body').removeClass('is-noscroll');
-      	$('.bg').removeClass('is-show');
      }
 	});
 
 	// swiper
 	const swiper = new Swiper(".swiper", {
-	  loop: true,
+	  loop: false,
 	  // 自動再生
 	  // autoplay: {
 	  //   delay: 3000, // 4秒後に次のスライドへ
@@ -44,6 +43,27 @@ jQuery(function() {
 	      // centeredSlides: false,
 	    }
 	  },
+	  on: {
+            init: function () {
+                var slideCount = this.slides.length;
+                if (slideCount >= 3) {
+                    this.params.loop = true;
+                    this.loopDestroy();
+                    this.loopCreate();
+                }
+            },
+            slideChange: function () {
+                var slideCount = this.slides.length;
+                if (slideCount >= 3 && !this.params.loop) {
+                    this.params.loop = true;
+                    this.loopDestroy();
+                    this.loopCreate();
+                } else if (slideCount < 3 && this.params.loop) {
+                    this.params.loop = false;
+                    this.loopDestroy();
+                }
+            }
+        }
 	});
 
 	const mySwiperWrapper01 = document.getElementById('swiper-wrapper01');
@@ -141,18 +161,49 @@ jQuery(function() {
 
 	});
 
-	jQuery(window).on('scroll load', function() {
-		let headerHeight = jQuery(".header").innerHeight();
-		let scrollTop = jQuery(window).scrollTop(); // スクロール上部の位置
-		let areaTop = jQuery(".target-area").offset().top - headerHeight; // 対象エリアの上部の位置
-		let areaBottom = areaTop + jQuery(".target-area").innerHeight() + headerHeight; // 対象エリアの下部の位置
+	// const targetArea = jQuery(".target-area");
+	// if (targetArea.length) {
+	// 	jQuery(window).on('scroll load', function() {
+	// 		let headerHeight = jQuery(".header").innerHeight();
+	// 		let scrollTop = jQuery(window).scrollTop(); // スクロール上部の位置
+	// 		let areaTop = targetArea.offset().top - headerHeight; // 対象エリアの上部の位置
+	// 		let areaBottom = areaTop + jQuery(".target-area").innerHeight() + headerHeight; // 対象エリアの下部の位置
 
-		if (scrollTop > areaTop && scrollTop < areaBottom) {
-			jQuery(".header").addClass("is-in"); // スクロールが対象エリアに入った場合
-		} else {
-			jQuery(".header").removeClass("is-in"); // スクロールが対象エリアから出ている場合
-		}
-	});
+	// 		if (scrollTop > areaTop && scrollTop < areaBottom) {
+	// 			jQuery(".header").addClass("is-in"); // スクロールが対象エリアに入った場合
+	// 		} else {
+	// 			jQuery(".header").removeClass("is-in"); // スクロールが対象エリアから出ている場合
+	// 		}
+	// 	});
+	// }
+
+	const targetAreas = jQuery(".target-area");
+	if (targetAreas.length) {
+	    jQuery(window).on('scroll load', function() {
+	        let headerHeight = jQuery(".header").innerHeight();
+	        let scrollTop = jQuery(window).scrollTop(); // スクロール上部の位置
+	        let isInTargetArea = false;
+
+	        targetAreas.each(function() {
+	            let targetArea = jQuery(this);
+	            let areaTop = targetArea.offset().top - headerHeight; // 対象エリアの上部の位置
+	            let areaBottom = areaTop + targetArea.innerHeight() + headerHeight; // 対象エリアの下部の位置
+
+	            if (scrollTop > areaTop && scrollTop < areaBottom) {
+	                isInTargetArea = true;
+	                return false; // ループを終了
+	            }
+	        });
+
+	        if (isInTargetArea) {
+	            jQuery(".header").addClass("is-in"); // スクロールが任意の対象エリアに入った場合
+	        } else {
+	            jQuery(".header").removeClass("is-in"); // スクロールが全ての対象エリアから出ている場合
+	        }
+	    });
+	}
+
+
 
 	// $(window).scroll(function() {
 	//   let scroll = $(window).scrollTop();
